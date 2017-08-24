@@ -13,24 +13,24 @@
 <meta property="og:url" content="http://qiaotian.me/2017/08/24/start_rabbitmq/index.html">
 <meta property="og:site_name" content="ALL FOR ONE">
 <meta property="og:description" content="RabbitMQ RabbitMQ是一种消息代理（message broker），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递二进制消息数据，后者传递纸质信件。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 P，消费就是消息接受端 R，消息队列 Q">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_producer_consumer.jpg">
 <meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_producer_consumer.jpg">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_producer_consumer.jpg">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_producer.jpg">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_consumer.jpg">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_monitor.png">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_monitor2.png">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_monitor3.png">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_producer.jpg">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_consumer.jpg">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_monitor.png">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_monitor2.png">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_monitor3.png">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_01.png">
 <meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_01.png">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_01.png">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_02.png">
 <meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_02.png">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_02.png">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_03.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_03.png">
-<meta property="og:updated_time" content="2017-08-24T16:50:06.000Z">
+<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_03.png">
+<meta property="og:updated_time" content="2017-08-24T17:16:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RabbitMQ安装及使用">
 <meta name="twitter:description" content="RabbitMQ RabbitMQ是一种消息代理（message broker），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递二进制消息数据，后者传递纸质信件。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 P，消费就是消息接受端 R，消息队列 Q">
-<meta name="twitter:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_producer_consumer.jpg">
+<meta name="twitter:image" content="http://qiaotian.me/uploads/start_rabbitmq_producer_consumer.jpg">
     
     
         
@@ -153,12 +153,12 @@
   <div class="content" itemprop="articleBody">
     <p><strong>RabbitMQ</strong></p>
 <p>RabbitMQ是一种消息代理（<strong>message broker</strong>），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递<mark>二进制消息数据</mark>，后者传递<mark>纸质信件</mark>。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 <strong>P</strong>，消费就是消息接受端 <strong>R</strong>，消息队列 <strong>QUEUE</strong> 是消息缓存，存在于 <strong>RMQ Server</strong> 上。</p>
-<div align="center"><br><img src="../uploads/start_rabbitmq_producer_consumer.jpg" width="300"><br></div>
+<div align="center"><br><img src="/uploads/start_rabbitmq_producer_consumer.jpg" width="300"><br></div>
 
 <p>[//]:<br><img src="../uploads/start_rabbitmq_producer_consumer.jpg" alt="producer_consumer"></p>
 <p><strong>SEND发送端实验</strong></p>
 <p>本实验任务是发送消息到队列，在<code>send.py</code>中实现业务逻辑。这里，主要借助 <mark>pika</mark> 模块实现功能，<a href="https://pika.readthedocs.io/en/0.10.0/" target="_blank" rel="external">pika</a> 是 <strong>AMQP 0-9-1</strong> 协议的纯python实现，省去了很多麻烦。</p>
-<div align="center"><br><img src="../uploads/start_rabbitmq_producer.jpg" width="200"><br></div>
+<div align="center"><br><img src="/uploads/start_rabbitmq_producer.jpg" width="200"><br></div>
 
 <p>第一，建立 <strong>P</strong> 与 <strong>Q</strong> 的连接。鉴于 RMQ 服务端运行与本地，参数<code>localhost</code>可根据实际场景替换。</p>
 <pre><code>#!/usr/bin/env python
@@ -176,7 +176,7 @@ print(&quot; [x] Sent &apos;No more words!&apos;&quot;)
 </code></pre><p>第四，退出。需要先确认缓冲区是否已经清理，消息是否已经全部接收成功。该过程操作较为复杂，可以简化为如下操作</p>
 <pre><code>connection.close()
 </code></pre><p><strong>RECEIVE接收端实验</strong></p>
-<div align="center"><br><img src="../uploads/start_rabbitmq_consumer.jpg" width="200"><br></div>
+<div align="center"><br><img src="/uploads/start_rabbitmq_consumer.jpg" width="200"><br></div>
 
 <p>再次声明队列<code>hello</code>是一种良好习惯，原因在于其能够确保队列存在。实际部署中，我们不能够保证<code>send.py</code>在<code>receive.py</code>前运行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">channel.queue_declare(queue=&apos;hello&apos;)</div></pre></td></tr></table></figure>
@@ -194,24 +194,24 @@ print(&quot; [x] Sent &apos;No more words!&apos;&quot;)
 <li>输入 <code>launchctl limit</code></li>
 <li>输入 <code>sudo rabbitmqctl list_queues</code>，下图所示，本机只有一个名为<code>hello</code>的消息队列，队列中有<code>5001</code>条消息。</li>
 </ul>
-<div align="center"><br><img src="../uploads/start_rabbitmq_monitor.png"><br></div><br><div align="center"><br><img src="../uploads/start_rabbitmq_monitor2.png"><br></div><br><div align="center"><br><img src="../uploads/start_rabbitmq_monitor3.png"><br></div>
+<div align="center"><br><img src="/uploads/start_rabbitmq_monitor.png"><br></div><br><div align="center"><br><img src="/uploads/start_rabbitmq_monitor2.png"><br></div><br><div align="center"><br><img src="/uploads/start_rabbitmq_monitor3.png"><br></div>
 
 <p><strong>附：安装 <em>Pika</em>, <em>Erlang</em> 和 <em>RabbitMQ</em></strong></p>
 <p>安装<code>pika</code>模块</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip intall pika</div></pre></td></tr></table></figure>
 <p>下载安装文件 <a href="https://packages.erlang-solutions.com/os-x-installer/ErlangInstaller0.9.1.dmg" target="_blank" rel="external"><em>ErlangInstaller.dmg</em></a><br>打开dmg格式的安装文件，按提示将应用程序<code>ErlangInstall.app</code>拖拽到<code>Applications</code>文件夹中。</p>
-<div align="center"><br><img src="../uploads/start_rabbitmq_01.png" width="400"><br></div>
+<div align="center"><br><img src="/uploads/start_rabbitmq_01.png" width="400"><br></div>
 
 <p>[//]:<br><img src="../uploads/start_rabbitmq_01.png" alt="01"></p>
 <p>运行<code>ErlangInstall.app</code>并安装你期望的Erlang版本。</p>
-<div align="center"><br><img src="../uploads/start_rabbitmq_02.png" width="400"><br></div>
+<div align="center"><br><img src="/uploads/start_rabbitmq_02.png" width="400"><br></div>
 
 
 <p>[//]:<br><img src="../uploads/start_rabbitmq_02.png" alt="02"></p>
 <p>使用<code>homebrew</code>安装RabbitMQ，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew update</div><div class="line">brew install rabbitmq</div></pre></td></tr></table></figure>
 <p>运行RabbitMQ服务端<code>/usr/local/sbin/rabbitmq-server</code>，log日志如下即启动成功。</p>
-<div align="center"><br><img src="../uploads/start_rabbitmq_03.png"><br></div>
+<div align="center"><br><img src="/uploads/start_rabbitmq_03.png"><br></div>
 
 <p>[//]:<br><img src="/uploads/start_rabbitmq_03.png" alt="03"></p>
 <p><strong>REFERENCE</strong></p>
