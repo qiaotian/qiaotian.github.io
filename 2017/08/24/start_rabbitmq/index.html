@@ -20,12 +20,9 @@
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_monitor2.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_monitor3.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_01.png">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_01.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_02.png">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_02.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_03.png">
-<meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_03.png">
-<meta property="og:updated_time" content="2017-08-24T17:18:42.000Z">
+<meta property="og:updated_time" content="2017-08-24T17:21:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RabbitMQ安装及使用">
 <meta name="twitter:description" content="RabbitMQ RabbitMQ是一种消息代理（message broker），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递二进制消息数据，后者传递纸质信件。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 P，消费就是消息接受端 R，消息队列 Q">
@@ -200,18 +197,14 @@ print(&quot; [x] Sent &apos;No more words!&apos;&quot;)
 <p>下载安装文件 <a href="https://packages.erlang-solutions.com/os-x-installer/ErlangInstaller0.9.1.dmg" target="_blank" rel="external"><em>ErlangInstaller.dmg</em></a><br>打开dmg格式的安装文件，按提示将应用程序<code>ErlangInstall.app</code>拖拽到<code>Applications</code>文件夹中。</p>
 <div align="center"><br><img src="/uploads/start_rabbitmq_01.png" width="400"><br></div>
 
-<p>[//]:<br><img src="../uploads/start_rabbitmq_01.png" alt="01"></p>
 <p>运行<code>ErlangInstall.app</code>并安装你期望的Erlang版本。</p>
 <div align="center"><br><img src="/uploads/start_rabbitmq_02.png" width="400"><br></div>
 
-
-<p>[//]:<br><img src="../uploads/start_rabbitmq_02.png" alt="02"></p>
 <p>使用<code>homebrew</code>安装RabbitMQ，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew update</div><div class="line">brew install rabbitmq</div></pre></td></tr></table></figure>
 <p>运行RabbitMQ服务端<code>/usr/local/sbin/rabbitmq-server</code>，log日志如下即启动成功。</p>
 <div align="center"><br><img src="/uploads/start_rabbitmq_03.png"><br></div>
 
-<p>[//]:<br><img src="/uploads/start_rabbitmq_03.png" alt="03"></p>
 <p><strong>REFERENCE</strong></p>
 <p><a href="https://www.rabbitmq.com/tutorials/tutorial-one-python.html" target="_blank" rel="external">https://www.rabbitmq.com/tutorials/tutorial-one-python.html</a></p>
 
