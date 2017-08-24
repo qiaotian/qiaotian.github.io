@@ -14,7 +14,6 @@
 <meta property="og:site_name" content="ALL FOR ONE">
 <meta property="og:description" content="RabbitMQ RabbitMQ是一种消息代理（message broker），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递二进制消息数据，后者传递纸质信件。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 P，消费就是消息接受端 R，消息队列 Q">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_producer_consumer.jpg">
-<meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_producer_consumer.jpg">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_producer.jpg">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_consumer.jpg">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_monitor.png">
@@ -26,7 +25,7 @@
 <meta property="og:image" content="http://qiaotian.me/2017/08/24/uploads/start_rabbitmq_02.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_03.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_03.png">
-<meta property="og:updated_time" content="2017-08-24T17:16:11.000Z">
+<meta property="og:updated_time" content="2017-08-24T17:18:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RabbitMQ安装及使用">
 <meta name="twitter:description" content="RabbitMQ RabbitMQ是一种消息代理（message broker），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递二进制消息数据，后者传递纸质信件。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 P，消费就是消息接受端 R，消息队列 Q">
@@ -155,7 +154,6 @@
 <p>RabbitMQ是一种消息代理（<strong>message broker</strong>），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递<mark>二进制消息数据</mark>，后者传递<mark>纸质信件</mark>。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 <strong>P</strong>，消费就是消息接受端 <strong>R</strong>，消息队列 <strong>QUEUE</strong> 是消息缓存，存在于 <strong>RMQ Server</strong> 上。</p>
 <div align="center"><br><img src="/uploads/start_rabbitmq_producer_consumer.jpg" width="300"><br></div>
 
-<p>[//]:<br><img src="../uploads/start_rabbitmq_producer_consumer.jpg" alt="producer_consumer"></p>
 <p><strong>SEND发送端实验</strong></p>
 <p>本实验任务是发送消息到队列，在<code>send.py</code>中实现业务逻辑。这里，主要借助 <mark>pika</mark> 模块实现功能，<a href="https://pika.readthedocs.io/en/0.10.0/" target="_blank" rel="external">pika</a> 是 <strong>AMQP 0-9-1</strong> 协议的纯python实现，省去了很多麻烦。</p>
 <div align="center"><br><img src="/uploads/start_rabbitmq_producer.jpg" width="200"><br></div>
