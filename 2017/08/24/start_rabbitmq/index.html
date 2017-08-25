@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_01.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_02.png">
 <meta property="og:image" content="http://qiaotian.me/uploads/start_rabbitmq_03.png">
-<meta property="og:updated_time" content="2017-08-24T17:21:26.000Z">
+<meta property="og:updated_time" content="2017-08-25T02:24:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RabbitMQ安装及使用">
 <meta name="twitter:description" content="RabbitMQ RabbitMQ是一种消息代理（message broker），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递二进制消息数据，后者传递纸质信件。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 P，消费就是消息接受端 R，消息队列 Q">
@@ -78,7 +78,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2017/08/29/pytest/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        <li><a class="icon" href="/2017/08/24/ubuntu_init/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
         
         <li><a class="icon" href="/2017/08/14/seismic_data/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
@@ -148,7 +148,7 @@
 
   <div class="content" itemprop="articleBody">
     <p><strong>RabbitMQ</strong></p>
-<p>RabbitMQ是一种消息代理（<strong>message broker</strong>），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递<mark>二进制消息数据</mark>，后者传递<mark>纸质信件</mark>。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 <strong>P</strong>，消费就是消息接受端 <strong>R</strong>，消息队列 <strong>QUEUE</strong> 是消息缓存，存在于 <strong>RMQ Server</strong> 上。</p>
+<p>RabbitMQ是一种消息代理（<strong>message broker</strong>），其工作原理与邮政系统类似：寄件人将信件放入邮箱，邮递员负责在某个时间将信件从邮箱取走并邮递到收件人，换言之，RabbitMQ约等于“邮箱+邮局+邮递员”。两者的区别在于前者传递<mark>二进制消息数据</mark>，后者传递<mark>纸质信件</mark>。不难看出，上述过程符合“生产者-消费者”模式，生产者就是消息发送端 <strong>P</strong>，消费就是消息接受端 <strong>R</strong>，消息队列 <strong>QUEUE</strong> 是消息缓存，存在于 <strong>RMQ Server</strong> 上。下图表示的是<mark>简化的消息传递模型</mark>。</p>
 <div align="center"><br><img src="/uploads/start_rabbitmq_producer_consumer.jpg" width="300"><br></div>
 
 <p><strong>SEND发送端实验</strong></p>
